@@ -88,6 +88,15 @@ banners:
     You shall not pass. Unless you are authorized. Then you shall pass.
     EOF
 
+# Syslog
+logging:
+  vrfs:
+    - name: default
+      source_interface: Management0
+      hosts:
+        - name: 10.200.0.108
+        - name: 10.200.1.108
+
 # L3 Edge port definitions. This can be any port in the entire Fabric, where IP interfaces are defined.
 l3_edge:
   # Define a new IP pool that will be used to assign IP addresses to L3 Edge interfaces.
